@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <CheckBox android:id="@+id/checkboxShift" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/shift_check" android:layout_weight="0"/>
+        <CheckBox android:id="@+id/checkboxCtrl" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/control_check" android:layout_weight="0"/>
+        <CheckBox android:id="@+id/checkboxAlt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/alt_check" android:layout_weight="0"/>
+        <Spinner android:id="@+id/spinnerKeySelect" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:id="@+id/buttonSend" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/send_button"/>
+        <TextView android:id="@+id/textKeyDesc" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@android:drawable/divider_horizontal_bright"/>
+    <ScrollView android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TableLayout android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TableRow>
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:gravity="right|center_vertical|center_horizontal|center" android:paddingRight="10dp" android:text="@string/keys_caption"/>
+                    <Spinner android:id="@+id/spinnerKeysInList" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </TableRow>
+                <TableRow>
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:gravity="right|center_vertical|center_horizontal|center" android:paddingRight="10dp" android:text="@string/list_caption"/>
+                    <Spinner android:id="@+id/spinnerLists" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </TableRow>
+                <TableRow>
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:gravity="right|center_vertical|center_horizontal|center" android:paddingRight="10dp" android:text="@string/list_name_caption"/>
+                    <EditText android:id="@+id/textListName" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1"/>
+                </TableRow>
+            </TableLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                    <Button android:id="@+id/buttonNewList" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/new_list_button"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                    <Button android:id="@+id/buttonCopyList" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/copy_list_button"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

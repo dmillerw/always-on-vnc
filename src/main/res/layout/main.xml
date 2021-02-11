@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:gravity="right|center_vertical|center_horizontal|center" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/connection_caption"/>
+            <Button android:textAppearance="?android:attr/textAppearanceMedium" android:id="@+id/buttonGO" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/connect_button"/>
+        </LinearLayout>
+        <Spinner android:id="@+id/spinnerConnection" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@android:drawable/divider_horizontal_bright"/>
+    <ScrollView android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TableLayout android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TableRow>
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:gravity="right|center_vertical|center_horizontal|center" android:paddingRight="10dp" android:text="@string/nickname_caption"/>
+                    <EditText android:id="@+id/textNickname" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1"/>
+                </TableRow>
+                <TableRow>
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:gravity="right|center_vertical|center_horizontal|center" android:paddingRight="10dp" android:text="@string/password_caption"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                        <EditText android:id="@+id/textPASSWORD" android:layout_width="match_parent" android:layout_height="wrap_content" android:password="true" android:singleLine="true" android:layout_weight="1"/>
+                        <CheckBox android:id="@+id/checkboxKeepPassword" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/keep_password_button" android:layout_weight="0"/>
+                    </LinearLayout>
+                </TableRow>
+                <TableRow>
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:gravity="right|center_vertical|center_horizontal|center" android:paddingRight="10dp" android:text="@string/address_caption" android:hint="localhost"/>
+                    <EditText android:id="@+id/textIP" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1"/>
+                </TableRow>
+                <TableRow>
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:gravity="right|center_vertical|center_horizontal|center" android:paddingRight="10dp" android:text="@string/port_caption"/>
+                    <EditText android:id="@+id/textPORT" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="5900" android:singleLine="true" android:layout_weight="1"/>
+                </TableRow>
+                <TableRow>
+                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:gravity="right|center_vertical|center_horizontal|center" android:paddingRight="10dp" android:text="@string/username_caption"/>
+                    <EditText android:id="@+id/textUsername" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/username_hint" android:singleLine="true" android:layout_weight="1"/>
+                </TableRow>
+            </TableLayout>
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:layout_gravity="left|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/color_format_caption"/>
+            <Spinner android:id="@+id/colorformat" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <CheckBox android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/checkboxUseLocalCursor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/local_mouse_check"/>
+            <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/force_full_check"/>
+                <RadioGroup android:orientation="horizontal" android:id="@+id/groupForceFullScreen" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RadioButton android:id="@+id/radioForceFullScreenAuto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/auto"/>
+                    <RadioButton android:id="@+id/radioForceFullScreenOn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/on"/>
+                    <RadioButton android:id="@+id/radioForceFullScreenOff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/off"/>
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <CheckBox android:id="@+id/checkUseImmersive" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/use_immersive_check"/>
+                <CheckBox android:id="@+id/checkUseWakeLock" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/use_wake_lock_check"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <Button android:id="@+id/buttonRepeater" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/repeater_button"/>
+                <TextView android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/textRepeaterId" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/repeater_empty_text"/>
+            </LinearLayout>
+            <Button android:id="@+id/buttonImportExport" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/import_export_settings"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

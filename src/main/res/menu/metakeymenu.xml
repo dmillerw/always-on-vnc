@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_delete" android:id="@+id/itemDeleteKeyList" android:title="@string/delete_key_list" android:alphabeticShortcut="d" android:numericShortcut="1"/>
+    <item android:icon="@android:drawable/ic_menu_close_clear_cancel" android:id="@+id/itemDeleteKey" android:title="@string/delete_key" android:alphabeticShortcut="k" android:numericShortcut="2"/>
+</menu>

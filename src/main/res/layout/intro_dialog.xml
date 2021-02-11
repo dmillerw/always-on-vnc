@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="12sp" android:id="@+id/textIntroText" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textSize="14sp" android:id="@+id/buttonCloseIntroDontShow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/intro_dont_show"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mouse_icon"/>
+            <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:orientation="horizontal" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <Button android:textSize="14sp" android:id="@+id/buttonCloseIntro" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/close"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
